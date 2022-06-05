@@ -26,6 +26,18 @@ class _HomeState extends State<Home> {
     });
   }
 
+  _calcular() {
+    setState(() {
+      double taxa = double.parse(taxaController.text);
+      double valorBruto = double.parse(valorBrutoController.text);
+      double desconto = valorBruto * (taxa / 100.0);
+      double valorLiquido = valorBruto - desconto;
+      _informacao = "Valor bruto: ${valorBruto.toStringAsFixed(2)}\n" +
+          "Desconto: ${desconto.toStringAsFixed(2)} \n " +
+          "Valor líquido: ${valorLiquido.toStringAsFixed(2)}";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     //Scaffold utilizado para criar tela, caso a quantidade de elementos
@@ -37,7 +49,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Color.fromARGB(255, 60, 136, 171),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: _limparFormulario,
             icon: Icon(Icons.refresh),
           ),
         ],
