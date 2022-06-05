@@ -14,6 +14,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String _informacao = "Digite os valores";
+
   @override
   Widget build(BuildContext context) {
     //Scaffold utilizado para criar tela, caso a quantidade de elementos
@@ -68,6 +70,11 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+              Text(
+                _informacao,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.orangeAccent, fontSize: 18.0),
+              )
             ],
           ),
         ),
