@@ -18,6 +18,14 @@ class _HomeState extends State<Home> {
   TextEditingController taxaController = TextEditingController();
   TextEditingController valorBrutoController = TextEditingController();
 
+  _limparFormulario() {
+    taxaController.text = "";
+    valorBrutoController.text = "";
+    setState(() {
+      _informacao = "Digite os valores";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     //Scaffold utilizado para criar tela, caso a quantidade de elementos
@@ -48,6 +56,7 @@ class _HomeState extends State<Home> {
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
+                controller: taxaController,
               ),
               TextFormField(
                 keyboardType: TextInputType.number,
@@ -57,6 +66,7 @@ class _HomeState extends State<Home> {
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
+                controller: valorBrutoController,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
