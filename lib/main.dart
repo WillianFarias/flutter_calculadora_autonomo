@@ -31,6 +31,9 @@ class _HomeState extends State<Home> {
         ],
       ),
       backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+      ),
     );
   }
 }
