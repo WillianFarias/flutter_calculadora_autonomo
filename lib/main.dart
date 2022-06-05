@@ -15,6 +15,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   String _informacao = "Digite os valores";
+  TextEditingController taxaController = TextEditingController();
+  TextEditingController valorBrutoController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +75,7 @@ class _HomeState extends State<Home> {
               Text(
                 _informacao,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.orangeAccent, fontSize: 18.0),
+                style: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
               )
             ],
           ),
