@@ -14,8 +14,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Pagamento de autônomo"),
+    //Scaffold utilizado para criar tela, caso a quantidade de elementos
+    //estrapolar o tamanho da tela sera criado uma barra de rolagem
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Pagamento de autônomo"),
+      ),
     );
   }
 }
