@@ -7,8 +7,10 @@ void main() {
 }
 
 class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
-  _HomeState createState() => _HomeState();
+  State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
@@ -19,7 +21,16 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Pagamento de autônomo"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 60, 136, 171),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.refresh),
+          ),
+        ],
       ),
+      backgroundColor: Colors.white,
     );
   }
 }
