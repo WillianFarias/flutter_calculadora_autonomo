@@ -33,6 +33,30 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+        child: Form(
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: "Taxa",
+                  labelStyle: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
+                ),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
+              ),
+              TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: "Valor bruto",
+                  labelStyle: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
+                ),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
