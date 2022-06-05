@@ -54,6 +54,20 @@ class _HomeState extends State<Home> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 51, 49, 47)),
               ),
+              Padding(
+                padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Calcular"),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 60, 136, 171),
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
